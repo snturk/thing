@@ -23,7 +23,7 @@ export default {
     }
   },
   created() {
-    document.body.style.background = "#3377ff";
+    document.body.style.background = "#66dbff";
     document.getElementById("mainTitle").style.color = "black";
     document.getElementById("mainTitle").style.borderColor = "black";
     document.getElementById("mainTitle").style.opacity = "1";
@@ -43,7 +43,7 @@ export default {
   border: 2.5px black solid;
   border-radius: 11px;
   width: fit-content;
-  transition-duration: 400ms;
+  transition-duration: 450ms;
 }
 #mainTitle:hover{
   color: floralwhite;
