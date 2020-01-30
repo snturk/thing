@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <div id="typeContainer">
+    <div id="typeContainer"><router-link to="/meditation">
       <div class="type" v-on:click="() => {}">3 4 2</div>
       <div class="type" v-on:click="() => {}">2 8 1</div>
-      <div class="type" v-on:click="() => {}">4 7 2</div>
+      <div class="type" v-on:click="() => {}">4 7 2</div>,
+      </router-link>
     </div>
   </div>
 </template>
