@@ -19,8 +19,7 @@ export default {
   },
   
   created() {
-    document.body.style.background = "black";
-    
+    document.body.style.background = "black"; 
   },
 }
 </script>
@@ -33,7 +32,8 @@ export default {
 }
 .type{
   margin-bottom: 110%;
-  font-size: 26px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 40px;
   border: 2px floralwhite solid;
   padding: 15px;
   border-radius: 11px;

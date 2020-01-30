@@ -23,24 +23,26 @@ export default {
     }
   },
   created() {
-    document.body.style.background = "#66dbff";
+    document.body.style.background = "#90b1ff";
     document.getElementById("mainTitle").style.color = "black";
     document.getElementById("mainTitle").style.borderColor = "black";
     document.getElementById("mainTitle").style.opacity = "1";
     document.getElementById("mainTitle").style.display = "block";
-  },
+  }
   
 }
 </script>
 
 <style scoped>
 #mainTitle{
-  font-size: 44px;
+  font-family: 'Assistant', sans-serif;
+  font-weight: 200;
+  font-size: 64px;
   color: black;
   margin: auto;
-  margin-top: 13%;
+  margin-top: 21%;
   padding: 15px;
-  border: 2.5px black solid;
+  border: 1.9px black solid;
   border-radius: 11px;
   width: fit-content;
   transition-duration: 450ms;

@@ -2,12 +2,14 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Type from '../views/Type.vue'
+import Meditation from '../views/Meditation.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {path: '/', name: 'home',component: Home},
-  {path: '/type', name: 'type', component: Type}
+  {path: '/type', name: 'type', component: Type},
+  {path: '/meditation', name: 'meditation', component: Meditation},
 ]
 
 const router = new VueRouter({
