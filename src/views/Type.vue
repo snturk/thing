@@ -1,25 +1,29 @@
 <template>
   <div id="app">
     <div id="typeTitle">choose a type</div>
-    <div id="typeContainer"><router-link to="/meditation">
-      <div class="type" v-on:click="() => {}">4 sec</div>
-      <div class="type" v-on:click="() => {}">7 sec</div>
-      <div class="type" v-on:click="() => {}">11 sec</div>
-      </router-link>
+    <div id="typeContainer">
+      <div class="type" v-on:click="setType(2)">4 sec</div>
+      <div class="type" v-on:click="setType(7)">7 sec</div>
+      <div class="type" v-on:click="setType(11)">11 sec</div>
     </div>
   </div>
 </template>
 
 <script>
+import router from '../router'
+import Vuex from '../store/index.js'
 export default {
   data(){
     return{
-      inhale: 0,
-      hold: 0,
-      exhale: 0,
+      
     }
   },
-  
+  methods: {
+    setType(typeNum){
+      Vuex.state.meditationType = typeNum;
+      router.push('/meditation');
+    }
+  },
   created() {
     document.body.style.background = "black"; 
   },
