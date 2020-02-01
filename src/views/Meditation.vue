@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div id="mediContainer">
-      <div id="circle">
+    <div :style="{animationDuration: duration + 's'}" id="mediContainer">
+      <div :style="{animationDuration: duration + 's'}" id="circle">
 
       </div>
-      <div id="message">
+      <div :style="{animationDuration: duration/2 + 's'}" id="message">
         {{message}}
       </div>
     </div>
@@ -12,12 +12,14 @@
 </template>
 
 <script>
+import Vuex from '../store/index.js'
 export default {
   data(){
     return{
       message: "breath in",
+      duration: Vuex.state.meditationType
+      }
       
-    }
   },
   methods: {
     changeMsg(){
@@ -33,13 +35,13 @@ export default {
     setInterval(()=>{
       this.changeMsg();
       
-    }, 4000)
+    }, this.duration/2*1000) // multiplied by 1000 because of seconds to miliseconds
   },
   
 }
 </script>
 
-<style scoped>
+<style>
 #mediContainer{
   top: 0;
   left: 0;
@@ -83,10 +85,10 @@ export default {
   animation-iteration-count: infinite;
 }
 @keyframes message{
-  0% {opacity: 1}
-  96% {opacity: 1}
-  98% {opacity: 0}
-  100% {opacity: 1}
+  0% {opacity: 0}
+  20% {opacity: 1}
+  80% {opacity: 1}
+  100% {opacity: 0}
 }
   
 </style>
