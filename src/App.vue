@@ -22,4 +22,8 @@ body{
   text-align: center;
   color: floralwhite;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
 </style>
