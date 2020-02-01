@@ -10,7 +10,11 @@ export default {
   name: 'home',
   data(){
     return{
-      clickedTitle(){
+      
+    }
+  },
+  methods: {
+    clickedTitle(){
         document.body.style.background = "black";
         document.getElementById("mainTitle").style.color = "floralwhite";
         document.getElementById("mainTitle").style.borderColor = "floralwhite";
@@ -20,7 +24,6 @@ export default {
           router.push("type");
           }, 500);
       }
-    }
   },
   created() {
     document.body.style.background = "#90b1ff";
