@@ -1,18 +1,21 @@
 <template>
   <div id="app">
     <div :style="{animationDuration: duration + 's'}" id="mediContainer">
+      
       <div :style="{animationDuration: duration + 's'}" id="circle">
 
       </div>
       <div :style="{animationDuration: duration/2 + 's'}" id="message">
         {{message}}
       </div>
+      <div id="back"><router-link to="/type">back</router-link></div>
     </div>
   </div>
 </template>
 
 <script>
 import Vuex from '../store/index.js'
+import router from '../router'
 export default {
   data(){
     return{
@@ -31,6 +34,9 @@ export default {
     }
   },
   created(){
+    if(Vuex.state.meditationType == 0){
+      router.push('/type');
+    }
     document.body.style.background = "black";
     setInterval(()=>{
       this.changeMsg();
@@ -54,7 +60,7 @@ export default {
 }
 @keyframes body {
   0% {background-color: black}
-  50% {background-color: rgb(124, 13, 35)}
+  50% {background-color: rgb(4, 0, 44)}
   100% {background-color: black}
 }
 
@@ -89,6 +95,16 @@ export default {
   20% {opacity: 1}
   80% {opacity: 1}
   100% {opacity: 0}
+}
+
+#back{
+  top: 2%;
+  left: 2%;
+  position: fixed;
+  margin: auto;
+  padding: 5px;
+  border: 1px solid floralwhite;
+  border-radius: 5px;
 }
   
 </style>
