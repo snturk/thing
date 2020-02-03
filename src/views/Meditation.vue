@@ -19,17 +19,17 @@ import router from '../router'
 export default {
   data(){
     return{
-      message: "breath in",
+      message: "breathe in",
       duration: Vuex.state.meditationType
       }
       
   },
   methods: {
     changeMsg(){
-        if(this.message == "breath in"){
-          this.message = "breath out"
+        if(this.message == "breathe in"){
+          this.message = "breathe out"
         }else{
-          this.message = "breath in"
+          this.message = "breathe in"
         }  
     }
   },
@@ -54,13 +54,12 @@ export default {
   width: 100%;
   height: 100%;
   position: absolute;
-  animation-name: body;
-  animation-duration: 8s;
+  animation-name: backgroundChange;
   animation-iteration-count: infinite;
 }
-@keyframes body {
+@keyframes backgroundChange {
   0% {background-color: black}
-  50% {background-color: rgb(4, 0, 44)}
+  35%, 65% {background-color: #000f33}
   100% {background-color: black}
 }
 
@@ -68,18 +67,19 @@ export default {
   margin: auto;
   margin-top: 19%;
   width: fit-content;
-  background-color: #90b1ff;
+  background: linear-gradient(180deg, #ff4d4d, #90b1ff);
+  background-size: 400% 400%;
   border-radius: 50%;
   padding: 80px;
   box-shadow: 2px 2px 14px black;
   animation-name: circle;
-  animation-duration: 8s;
   animation-iteration-count: infinite;
 }
 @keyframes circle{
-  0% {transform: scale(0.1)}
-  50% {transform: scale(1);}
-  100% {transform: scale(0.1)}
+  0% {transform: scale(0.1);background-position:50% 100%}
+  35%, 65% {background-position:50% 100%}
+  50% {transform: scale(1); background-position:50% 0%}
+  100% {transform: scale(0.1);background-position:50% 100%}
 }
 
 #message{
@@ -87,13 +87,12 @@ export default {
   font-size: 34px;
   margin-top: 4%;
   animation-name: message;
-  animation-duration: 4s;
   animation-iteration-count: infinite;
 }
 @keyframes message{
   0% {opacity: 0}
-  20% {opacity: 1}
-  80% {opacity: 1}
+  30% {opacity: 1}
+  70% {opacity: 1}
   100% {opacity: 0}
 }
 
