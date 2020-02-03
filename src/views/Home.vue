@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div id="mainTitle" v-on:click="clickedTitle()">thing</div>
+    <div id="description">pure breathe exercise</div>
   </div>
 </template>
 
@@ -55,5 +56,12 @@ export default {
   background-color: black;
   transform: scale(0.87);
   cursor: pointer;
+}
+
+#description{
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  font-size: 20px;
+
 }
 </style>
