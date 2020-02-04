@@ -77,7 +77,7 @@ export default {
 }
 @keyframes circle{
   0% {transform: scale(0.1);background-position:50% 100%}
-  35%, 65% {background-position:50% 100%}
+  30%, 70% {background-position:50% 100%}
   50% {transform: scale(1); background-position:50% 0%}
   100% {transform: scale(0.1);background-position:50% 100%}
 }
