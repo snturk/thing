@@ -8,6 +8,8 @@
       <div :style="{animationDuration: duration/2 + 's'}" id="message">
         {{message}}
       </div>
+      <audio src="../../sounds/fire.mp3" autoplay loop>
+      </audio>
       <div id="back"><router-link to="/type">back</router-link></div>
     </div>
   </div>
@@ -20,7 +22,8 @@ export default {
   data(){
     return{
       message: "breathe in",
-      duration: Vuex.state.meditationType
+      duration: Vuex.state.meditationType,
+      sound: '../../sounds/fire.mp3'
       }
       
   },
