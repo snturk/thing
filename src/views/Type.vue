@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <div id="typeTitle">choose a type</div>
-    <div id="typeContainer">
+    <div class="typeTitle">choose a type</div>
+    <div class="typeContainer">
       <div class="type" v-on:click="setType(4)">4 sec</div>
       <div class="type" v-on:click="setType(6)">6 sec</div>
       <div class="type" v-on:click="setType(9)">9 sec</div>
@@ -20,9 +20,9 @@ export default {
     }
   },
   methods: {
-    setType(typeNum){
-      Vuex.state.meditationType = typeNum;
-      router.push('/meditation');
+    setType(type){
+      Vuex.state.meditationType = type;
+      router.push('/sound');
     }
   },
   created() {
@@ -31,14 +31,14 @@ export default {
 }
 </script>
 
-<style scoped>
-#typeTitle{
+<style>
+.typeTitle{
   font-size: 46px;
   font-family: 'Source Sans Pro', sans-serif;
   margin-top: 4%;
 }
 
-#typeContainer{
+.typeContainer{
   width: fit-content;
   margin: auto;
   margin-top: 4%;
@@ -46,7 +46,7 @@ export default {
 .type{
   margin-bottom: 70%;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 28px;
+  font-size: 30px;
   border: 2px floralwhite solid;
   padding: 15px;
   border-radius: 11px;
