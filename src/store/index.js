@@ -5,10 +5,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    meditationType: 0
+    meditationType: 0,
+    meditationSound: "",
   },
   mutations: {
-    setType: (state) => state.meditationType = 7,
   },
   actions: {
   },
