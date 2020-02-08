@@ -8,7 +8,7 @@
       <div :style="{animationDuration: duration/2 + 's'}" id="message">
         {{message}}
       </div>
-      <audio src="../../sounds/fire.mp3" autoplay loop>
+      <audio :src="sound" autoplay loop>
       </audio>
       <div id="back"><router-link to="/type">back</router-link></div>
     </div>
@@ -23,7 +23,7 @@ export default {
     return{
       message: "breathe in",
       duration: Vuex.state.meditationType,
-      sound: '../../sounds/fire.mp3'
+      sound: "",
       }
       
   },
@@ -39,6 +39,13 @@ export default {
   created(){
     if(Vuex.state.meditationType == 0){
       router.push('/type');
+    }
+    if(Vuex.state.meditationSound == "fire"){
+      this.sound = '/media/' + Vuex.state.meditationSound + '.66de88be.mp3';
+    }else if(Vuex.state.meditationSound == "water"){
+      this. sound = '/media/' + Vuex.state.meditationSound + '.c1a91378.mp3';
+    }else if(Vuex.state.meditationSound == "music"){
+      this. sound = '/media/' + Vuex.state.meditationSound + '.f60b972e.mp3';
     }
     document.body.style.background = "black";
     setInterval(()=>{
