@@ -5,7 +5,7 @@
       <div class="type" v-on:click="setSound('none')">none</div>
       <div class="type" id="fire" v-on:click="setSound('fire')">fire</div>
       <div class="type" id="water" v-on:click="setSound('water')">water</div>
-      <div class="type" id="music" v-on:click="setSound('music')">music</div>
+      <div class="type" id="music" v-on:click="setSound('classic')">music</div>
       <div class="type" id="wind" v-on:click="setSound('wind')">wind</div>
     </div>
   </div>
