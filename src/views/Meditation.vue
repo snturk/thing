@@ -41,11 +41,11 @@ export default {
       router.push('/type');
     }
     if(Vuex.state.meditationSound == "fire"){
-      this.sound = '/media/' + Vuex.state.meditationSound + '.66de88be.mp3';
+      this.sound = '../../sounds/' + Vuex.state.meditationSound + '.mp3';
     }else if(Vuex.state.meditationSound == "water"){
-      this. sound = '/media/' + Vuex.state.meditationSound + '.1bac3793.mp3';
+      this. sound = '../../sounds/' + Vuex.state.meditationSound + '.mp3';
     }else if(Vuex.state.meditationSound == "classic"){
-      this. sound = '/media/' + Vuex.state.meditationSound + '.f60b972e.mp3';
+      this. sound = '../../sounds/' + Vuex.state.meditationSound + '.mp3';
     }
     document.body.style.background = "black";
     setInterval(()=>{
