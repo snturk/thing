@@ -23,7 +23,7 @@ export default {
     return{
       message: "breathe in",
       duration: Vuex.state.meditationType,
-      sound: "../../sounds/" + Vuex.state.meditationSound + ".mp3",
+      sound: Vuex.state.meditationSound + ".mp3",
       }
       
   },
