@@ -56,13 +56,14 @@ export default {
   z-index: -2;
 }
 .bubble{
-  animation-duration: 60s;
+  animation-duration: 140s;
   animation-iteration-count: infinite;
   position: absolute;
-  background-color: #bbcfff;
-  padding: 80px;
+  background-color: #6691ff;
+  padding: 120px;
+  border: 1px black solid;
   border-radius: 50%;
-  filter: blur(3px);
+  filter: blur(10px);
   z-index: -1;
   transition-duration: 300ms;
 }
