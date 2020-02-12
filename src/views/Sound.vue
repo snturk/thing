@@ -6,7 +6,6 @@
       <div class="type" id="fire" v-on:click="setSound('fire')">fire</div>
       <div class="type" id="water" v-on:click="setSound('water')">water</div>
       <div class="type" id="music" v-on:click="setSound('classic')">music</div>
-      <div class="type" id="wind" v-on:click="setSound('wind')">wind</div>
     </div>
   </div>
 </template>
@@ -50,11 +49,6 @@ export default {
 #music{
   background-color: #ff66ff;
   color: floralwhite;
-}
-
-#wind{
-  background-color: #66ffff;
-  color: black;
 }
 
 </style>
